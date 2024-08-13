@@ -1,6 +1,7 @@
 name: infra creation
 on: [push, workflow_dispatch]
 jobs:
-  provision: ubuntu-latest
+  provision:
+    runs-on: ubuntu-latest
   steps:
     - run: terraform --version
