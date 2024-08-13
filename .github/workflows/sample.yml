@@ -4,4 +4,5 @@ jobs:
   provision:
     runs-on: ubuntu-latest
     steps:
-    - run: terraform --version
+    - uses: actions/checkout@4
+    - run: terraform init
