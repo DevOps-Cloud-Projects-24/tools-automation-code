@@ -27,9 +27,6 @@
   register: token
   become_user: ec2-user # Token can be fetched by ec2-user as gh login was done by that user.
 
-- name: print token
-  ansible.builtin.debug:
-    msg: "{{ token }}"
 
 #- name: download github cli repo
 #  ansible.builtin.get_url:
