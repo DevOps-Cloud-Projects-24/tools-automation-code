@@ -11,5 +11,9 @@ variable "tools" {
       instance_type = "t3.small"
       policy_name = []
     }
+
   }
+}
+variable "hosted_zone_id" {
+  default = "Z08559316LGZFCID8FWV"
 }
