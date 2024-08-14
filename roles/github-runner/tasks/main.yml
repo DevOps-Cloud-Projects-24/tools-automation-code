@@ -12,3 +12,14 @@
     src: https://github.com/actions/runner/releases/download/v2.319.0/actions-runner-linux-x64-2.319.0.tar.gz
     dest: "/actions-runner"
     remote_src: yes
+
+- name: download github cli repo
+  ansible.builtin.get_url:
+    url: https://cli.github.com/packages/rpm/gh-cli.repo
+    dest: /etc/yum.repos.d/gh-cli.repo
+
+- name: install github cli
+  ansible.builtin.dnf:
+    name: gh-cli
+    state: latest
+
